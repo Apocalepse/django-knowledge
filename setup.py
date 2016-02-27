@@ -14,12 +14,12 @@ setup(
     url = 'http://github.com/zapier/django-knowledge',
     install_requires=['Markdown>=2.1.1','Django>=1.4'],
     packages=['knowledge'],
-    package_data={'knowledge': [
-      'migrations/*.py',
-      'static/knowledge/css/*',
-      'templates/django_knowledge/*.html',
-      'templates/django_knowledge/emails/*.html',
-      'templatetags/*.py']},
+    # package_data={'knowledge': [
+    #   'migrations/*.py',
+    #   'static/knowledge/css/*',
+    #   'templates/django_knowledge/*.html',
+    #   'templates/django_knowledge/emails/*.html',
+    #   'templatetags/*.py']},
     classifiers = ['Development Status :: 3 - Alpha',
                    'Environment :: Web Environment',
                    'Framework :: Django',
