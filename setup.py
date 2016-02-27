@@ -21,7 +21,7 @@ setup(
       'templates/django_knowledge/emails/*.html',
       'templatetags/*.py',
       'locale/*']},
-    classifiers = ['Development Status :: 3 - Alpha',
+    classifiers=['Development Status :: 3 - Alpha',
                    'Environment :: Web Environment',
                    'Framework :: Django',
                    'Intended Audience :: Developers',
