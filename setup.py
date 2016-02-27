@@ -5,7 +5,7 @@ version_tuple = __import__('knowledge').VERSION
 version = '.'.join([str(v) for v in version_tuple])
 
 setup(
-    name = 'django-knowledge',
+    name='django-knowledge',
     description = '''A simple frontend and admin interface for dealing with help
         knowledge tickets and issues, including public and private responses and searching.''',
     version = version,
@@ -19,8 +19,7 @@ setup(
       'static/knowledge/css/*',
       'templates/django_knowledge/*.html',
       'templates/django_knowledge/emails/*.html',
-      'templatetags/*.py',
-      'locale*',]},
+      'templatetags/*.py']},
     classifiers = ['Development Status :: 3 - Alpha',
                    'Environment :: Web Environment',
                    'Framework :: Django',
