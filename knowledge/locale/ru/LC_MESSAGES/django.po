@@ -54,12 +54,12 @@ msgid "Name"
 msgstr "Имя"
 
 #: models.py:58
-msgid "Представьтесь"
-msgstr ""
+msgid "Enter your first and last name."
+msgstr "Введите ваше имя и фамилию."
 
 #: models.py:60
 msgid "Email"
-msgstr "Электронная почта"
+msgstr "Эл. адрес"
 
 #: models.py:61
 msgid "Enter a valid email address."
@@ -280,7 +280,7 @@ msgstr "Отправьте свой вопрос или предложение"
 
 #: templates/django_knowledge/sidebar.html:35
 msgid "Return to homepage."
-msgstr "На главноую"
+msgstr "На главную"
 
 #: templates/django_knowledge/thread.html:21
 #: templates/django_knowledge/thread.html:46
