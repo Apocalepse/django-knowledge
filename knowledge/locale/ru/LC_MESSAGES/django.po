@@ -254,10 +254,8 @@ msgid "Search"
 msgstr "Поиск"
 
 #: templates/django_knowledge/list.html:12
-#, fuzzy, python-format
-#| msgid "Top %(count)s Questions"
 msgid "Showing %(counter)s results"
-msgstr "ТОП %(count)s Вопросов"
+msgstr "%(count)s результатов"
 
 #: templates/django_knowledge/list.html:13
 #, python-format
@@ -278,8 +276,6 @@ msgid "previous"
 msgstr "предыдущее"
 
 #: templates/django_knowledge/list.html:32
-#, fuzzy, python-format
-#| msgid "page %(number)s of %(page)s"
 msgid "page %(number)s of %(pages)s"
 msgstr "страница %(number)s из %(page)s"
 
@@ -292,8 +288,6 @@ msgid "no responses"
 msgstr "нет ответов"
 
 #: templates/django_knowledge/question_list.html:7
-#, fuzzy
-#| msgid "Responses"
 msgid "responses"
 msgstr "Ответы"
 
@@ -363,22 +357,3 @@ msgstr "Добро пожаловать в службу поддержки."
 #: templates/django_knowledge/welcome.html:6
 msgid "Search for answers to your questions below, or ask your own."
 msgstr "Найдите ответы на свои вопросы или задайте новый."
-
-#~ msgid "Delete"
-#~ msgstr "Удалить"
-
-#~ msgid "Lock"
-#~ msgstr "Закрыть"
-
-#, fuzzy
-#~| msgid "accepted"
-#~ msgid "Clear_accepted"
-#~ msgstr "Принято"
-
-#, fuzzy
-#~| msgid "accepted"
-#~ msgid "Accept"
-#~ msgstr "Принято"
-
-#~ msgid "Уведомлять"
-#~ msgstr "Внимание"
