@@ -45,7 +45,7 @@
 
     {% url 'knowledge_ask' as form_url %}
 
-    {% include "django_knowledge/form.html" with submit_value=0|default:_("Submit this support request") submit_and=0|default:_("and we'll get back to you as soon as possible.") submit_url=form_url %}
+        {% include "django_knowledge/form.html" with submit_value=0|default:_("Submit this support request") submit_and=0|default:_("and we'll get back to you as soon as possible.") submit_url=form_url %}
   </div>
 {% endif %}
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-27 16:00+0500\n"
+"POT-Creation-Date: 2016-02-29 10:34+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,8 +42,8 @@ msgid "Categories"
 msgstr "Категории"
 
 #: models.py:51
-msgid "Уведомлять"
-msgstr "Внимание"
+msgid "Alert"
+msgstr "Уведомление"
 
 #: models.py:52
 msgid "Check this if you want to be alerted when a new response is added."
@@ -105,13 +105,22 @@ msgstr "Пожалуйста, укажите ответ. Markdown включен
 msgid "Responses"
 msgstr "Ответы"
 
-#: templates/django_knowledge/ask.html:6
-#: templates/django_knowledge/ask.html:10
+#: templates/django_knowledge/ask.html:5 templates/django_knowledge/ask.html:9
 #: templates/django_knowledge/list.html:43
 msgid "Ask a Question"
 msgstr "Задайте вопрос"
 
-#: templates/django_knowledge/ask.html:16
+#: templates/django_knowledge/ask.html:13
+#: templates/django_knowledge/list.html:48
+msgid "Submit this support request"
+msgstr "Задать вопрос"
+
+#: templates/django_knowledge/ask.html:13
+#: templates/django_knowledge/list.html:48
+msgid "and we'll get back to you as soon as possible."
+msgstr "и мы ответим как можно быстрее"
+
+#: templates/django_knowledge/ask.html:15
 msgid "Please log in to ask a question."
 msgstr "Пожалуйста, авторизуйтесь чтобы задать вопрос"
 
@@ -131,9 +140,9 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Сообщаем, что только что был опубликован ответ на следующий "
-"вопрос \"%(title)s\". Можете просмотреть по ссылке: <a href=\"%(domain)s"
-"%(url \")s\"\">%(domain)s%(url \")s</a\">.\n"
+"        Сообщаем, что только что был опубликован ответ на следующий вопрос "
+"\"%(title)s\". Можете просмотреть по ссылке: <a href=\"%(domain)s%(url \")s"
+"\"\">%(domain)s%(url \")s</a\">.\n"
 "        "
 
 #: templates/django_knowledge/emails/message.html:18
@@ -142,7 +151,8 @@ msgid ""
 "You are receiving these messages because you checked the 'alert' box when "
 "you originally posted."
 msgstr ""
-"Вы получили это сообщение потому, что отметели 'уведомить' когда задавали вопрос"
+"Вы получили это сообщение потому, что отметели 'Уведомление' когда задавали "
+"вопрос"
 
 #: templates/django_knowledge/emails/message.html:22
 #, python-format
@@ -154,9 +164,9 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Сообщаем, что только что был опубликован новый вопрос: "
-"\"%(title)s\". Можете просмотреть по ссылке: <a href=\"%(domain)s"
-"%(url \")s\"\">%(domain)s%(url \")s</a\">.\n"
+"        Сообщаем, что только что был опубликован новый вопрос: \"%(title)s"
+"\". Можете просмотреть по ссылке: <a href=\"%(domain)s%(url \")s\"\">"
+"%(domain)s%(url \")s</a\">.\n"
 "        "
 
 #: templates/django_knowledge/emails/message.html:30
@@ -182,8 +192,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Сообщаем, что только что был опубликован ответ на следующий "
-"вопрос \"%(title)s\". Можете просмотреть по ссылке: %(domain)s%(url \")s\"\n"
+"        Сообщаем, что только что был опубликован ответ на следующий вопрос "
+"\"%(title)s\". Можете просмотреть по ссылке: %(domain)s%(url \")s\"\n"
 "        "
 
 #: templates/django_knowledge/emails/message.txt:17
@@ -195,8 +205,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"        Сообщаем, что только что был опубликован новый вопрос: "
-"\"%(title)s\". Можете просмотреть по ссылке: %(domain)s%(url \")s\"\n"
+"        Сообщаем, что только что был опубликован новый вопрос: \"%(title)s"
+"\". Можете просмотреть по ссылке: %(domain)s%(url \")s\"\n"
 "        "
 
 #: templates/django_knowledge/emails/message.txt:26
@@ -235,6 +245,26 @@ msgstr "ТОП %(count)s Вопросов"
 msgid "Start typing your question here."
 msgstr "Введите свой вопрос здесь"
 
+#: templates/django_knowledge/inner.html:15
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/django_knowledge/list.html:12
+#, fuzzy, python-format
+#| msgid "Top %(count)s Questions"
+msgid "Showing %(counter)s results"
+msgstr "ТОП %(count)s Вопросов"
+
+#: templates/django_knowledge/list.html:13
+#, python-format
+msgid " for <em>%(search)s</em>"
+msgstr "для фразы <em>%(search)s</em>"
+
+#: templates/django_knowledge/list.html:14
+#, python-format
+msgid "in <em>%(category_title)s</em> category"
+msgstr "в категории <em>%(category_title)s</em>"
+
 #: templates/django_knowledge/list.html:21
 msgid "No results found."
 msgstr "Ничего не найдено"
@@ -244,8 +274,9 @@ msgid "previous"
 msgstr "предыдущее"
 
 #: templates/django_knowledge/list.html:32
-#, python-format
-msgid "page %(number)s of %(page)s"
+#, fuzzy, python-format
+#| msgid "page %(number)s of %(page)s"
+msgid "page %(number)s of %(pages)s"
 msgstr "страница %(number)s из %(page)s"
 
 #: templates/django_knowledge/list.html:35
@@ -261,8 +292,8 @@ msgid "accepted"
 msgstr "принято"
 
 #: templates/django_knowledge/question_list.html:6
-#: templates/django_knowledge/thread.html:20
-#: templates/django_knowledge/thread.html:45
+#: templates/django_knowledge/thread.html:19
+#: templates/django_knowledge/thread.html:44
 msgid "staff"
 msgstr "персонал"
 
@@ -282,28 +313,38 @@ msgstr "Отправьте свой вопрос или предложение"
 msgid "Return to homepage."
 msgstr "На главную"
 
-#: templates/django_knowledge/thread.html:21
-#: templates/django_knowledge/thread.html:46
+#: templates/django_knowledge/thread.html:20
+#: templates/django_knowledge/thread.html:45
 msgid "user"
 msgstr "пользователь"
 
-#: templates/django_knowledge/thread.html:42
+#: templates/django_knowledge/thread.html:41
 msgid "accepted answer"
 msgstr "принятый ответ"
 
-#: templates/django_knowledge/thread.html:43
+#: templates/django_knowledge/thread.html:42
 msgid "poster"
 msgstr "автор"
 
-#: templates/django_knowledge/thread.html:57
+#: templates/django_knowledge/thread.html:56
 msgid "No responses yet."
 msgstr "Ответов пока нет."
 
-#: templates/django_knowledge/thread.html:70
+#: templates/django_knowledge/thread.html:66
+#, fuzzy
+#| msgid "Please log in to ask a question."
+msgid "Respond to this question"
+msgstr "Пожалуйста, авторизуйтесь чтобы задать вопрос"
+
+#: templates/django_knowledge/thread.html:66
+msgid "and check back often for updates."
+msgstr "и проверьте обновления"
+
+#: templates/django_knowledge/thread.html:69
 msgid "This question has been closed."
 msgstr "Вопрос был закрыт."
 
-#: templates/django_knowledge/thread.html:72
+#: templates/django_knowledge/thread.html:71
 msgid "Please log in to respond."
 msgstr "Пожалуйста авторизуйтесь чтобы ответить."
 
@@ -314,3 +355,6 @@ msgstr "Добро пожаловать в службу поддержки."
 #: templates/django_knowledge/welcome.html:6
 msgid "Search for answers to your questions below, or ask your own."
 msgstr "Найдите ответы на свои вопросы или задайте новый."
+
+#~ msgid "Уведомлять"
+#~ msgstr "Внимание"
