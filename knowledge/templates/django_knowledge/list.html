@@ -1,7 +1,5 @@
 {% extends 'django_knowledge/inner.html' %}
-
 {% load i18n %}
-
 {% load knowledge_tags %}
 
 {% block title %}{% blocktrans with counter=questions.paginator.count %}Showing {{ counter }} results {% endblocktrans %}{% if search %} {% blocktrans %}for {{ search }}{% endblocktrans %}{% endif %}{% if category %} {% blocktrans with category_title=category.title %} in {{ category_title }} category{% endblocktrans %}{% endif %}{% endblock title %}

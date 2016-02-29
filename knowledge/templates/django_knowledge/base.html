@@ -1,10 +1,11 @@
+{% load i18n %}
 <!doctype html>
 <html lang="en">
 <head>
 
   <meta charset="utf-8">
   
-  <title>{% block title %}{% endblock title %} | Support Center</title>
+  <title>{% block title %}{% endblock title %} | {% trans "Support Center" %}</title>
   
   <link rel="stylesheet" href="{{ STATIC_URL }}knowledge/css/reset.css">
   <link rel="stylesheet" href="{{ STATIC_URL }}knowledge/css/main.css">
