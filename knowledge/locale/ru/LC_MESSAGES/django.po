@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 10:34+0500\n"
+"POT-Creation-Date: 2016-02-29 13:14+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: forms.py:46 models.py:14
+#: forms.py:46 models.py:14 views.py:21
 msgid "Internal"
 msgstr "Внутренний"
 
-#: models.py:12
+#: models.py:12 views.py:16 views.py:22
 msgid "Public"
 msgstr "Публичный"
 
-#: models.py:13
+#: models.py:13 views.py:16 views.py:22
 msgid "Private"
 msgstr "Приватный"
 
-#: models.py:19
+#: models.py:19 views.py:21
 msgid "Inherit"
 msgstr "Наследовать"
 
@@ -85,7 +85,7 @@ msgstr "Детальное описание"
 msgid "Please offer details. Markdown enabled."
 msgstr "Пожалуйста, укажите детали. Markdown включен."
 
-#: models.py:158 models.py:261
+#: models.py:158 models.py:264
 msgid "Status"
 msgstr "Статус"
 
@@ -93,15 +93,15 @@ msgstr "Статус"
 msgid "Questions"
 msgstr "Вопросы"
 
-#: models.py:258 models.py:270
+#: models.py:261 models.py:273
 msgid "Response"
 msgstr "Ответ"
 
-#: models.py:259
+#: models.py:262
 msgid "Please enter your response. Markdown enabled."
 msgstr "Пожалуйста, укажите ответ. Markdown включен."
 
-#: models.py:271
+#: models.py:274
 msgid "Responses"
 msgstr "Ответы"
 
@@ -283,19 +283,29 @@ msgstr "страница %(number)s из %(page)s"
 msgid "next"
 msgstr "следующее"
 
-#: templates/django_knowledge/question_list.html:6
+#: templates/django_knowledge/question_list.html:7
 msgid "no responses"
 msgstr "нет ответов"
 
-#: templates/django_knowledge/question_list.html:6
+#: templates/django_knowledge/question_list.html:7
+#, fuzzy
+#| msgid "Responses"
+msgid "responses"
+msgstr "Ответы"
+
+#: templates/django_knowledge/question_list.html:7
 msgid "accepted"
 msgstr "принято"
 
-#: templates/django_knowledge/question_list.html:6
+#: templates/django_knowledge/question_list.html:7
 #: templates/django_knowledge/thread.html:19
 #: templates/django_knowledge/thread.html:44
 msgid "staff"
 msgstr "персонал"
+
+#: templates/django_knowledge/question_list.html:7
+msgid "by"
+msgstr ""
 
 #: templates/django_knowledge/sidebar.html:6
 msgid "My Questions"
@@ -320,7 +330,7 @@ msgstr "пользователь"
 
 #: templates/django_knowledge/thread.html:41
 msgid "accepted answer"
-msgstr "принятый ответ"
+msgstr "ответ принят"
 
 #: templates/django_knowledge/thread.html:42
 msgid "poster"
@@ -334,11 +344,11 @@ msgstr "Ответов пока нет."
 #, fuzzy
 #| msgid "Please log in to ask a question."
 msgid "Respond to this question"
-msgstr "Пожалуйста, авторизуйтесь чтобы задать вопрос"
+msgstr "Ответить на вопрос"
 
 #: templates/django_knowledge/thread.html:66
 msgid "and check back often for updates."
-msgstr "и проверьте обновления"
+msgstr "и проверять обновления."
 
 #: templates/django_knowledge/thread.html:69
 msgid "This question has been closed."
@@ -355,6 +365,26 @@ msgstr "Добро пожаловать в службу поддержки."
 #: templates/django_knowledge/welcome.html:6
 msgid "Search for answers to your questions below, or ask your own."
 msgstr "Найдите ответы на свои вопросы или задайте новый."
+
+#: views.py:17 views.py:23
+msgid "Delete"
+msgstr "Удалить"
+
+#: views.py:17
+msgid "Lock"
+msgstr "Закрыть"
+
+#: views.py:18
+#, fuzzy
+#| msgid "accepted"
+msgid "Clear_accepted"
+msgstr "Принято"
+
+#: views.py:23
+#, fuzzy
+#| msgid "accepted"
+msgid "Accept"
+msgstr "Принято"
 
 #~ msgid "Уведомлять"
 #~ msgstr "Внимание"

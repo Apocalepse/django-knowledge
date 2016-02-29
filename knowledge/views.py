@@ -4,6 +4,7 @@ from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.db.models import Q
+from django.utils.translation import ugettext_lazy as _
 
 from knowledge.models import Question, Response, Category
 from knowledge.forms import QuestionForm, ResponseForm
@@ -12,14 +13,14 @@ from knowledge.utils import paginate
 
 ALLOWED_MODS = {
     'question': [
-        'private', 'public',
-        'delete', 'lock',
-        'clear_accepted'
+        _('Private'), _('Public'),
+        _('Delete'), _('Lock'),
+        _('Clear_accepted')
     ],
     'response': [
-        'internal', 'inherit',
-        'private', 'public',
-        'delete', 'accept'
+        _('Internal'), _('Inherit'),
+        _('Private'), _('Public'),
+        _('Delete'), _('Accept')
     ]
 }
 
