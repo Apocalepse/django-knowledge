@@ -239,7 +239,7 @@ msgstr "Служба поддержки"
 #: templates/django_knowledge/index.html:11
 #, python-format
 msgid "Top %(count)s Questions"
-msgstr "ТОП %(count)s Вопросов"
+msgstr "%(count)s популярных вопросов"
 
 #: templates/django_knowledge/inner.html:14
 msgid "Start typing your question here."

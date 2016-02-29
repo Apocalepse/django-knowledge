@@ -13,14 +13,14 @@ from knowledge.utils import paginate
 
 ALLOWED_MODS = {
     'question': [
-        _('Private'), _('Public'),
-        _('Delete'), _('Lock'),
-        _('Clear_accepted')
+        'private', 'public',
+        'delete', 'lock',
+        'clear_accepted'
     ],
     'response': [
-        _('Internal'), _('Inherit'),
-        _('Private'), _('Public'),
-        _('Delete'), _('Accept')
+        'internal', 'inherit',
+        'private', 'public',
+        'delete', 'accept'
     ]
 }
 
