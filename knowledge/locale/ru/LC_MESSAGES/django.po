@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-29 13:14+0500\n"
+"POT-Creation-Date: 2016-02-29 13:30+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: forms.py:46 models.py:14 views.py:21
+#: forms.py:46 models.py:14
 msgid "Internal"
 msgstr "Внутренний"
 
-#: models.py:12 views.py:16 views.py:22
+#: models.py:12
 msgid "Public"
 msgstr "Публичный"
 
-#: models.py:13 views.py:16 views.py:22
+#: models.py:13
 msgid "Private"
 msgstr "Приватный"
 
-#: models.py:19 views.py:21
+#: models.py:19
 msgid "Inherit"
 msgstr "Наследовать"
 
@@ -232,6 +232,10 @@ msgstr "Новый вопрос \"%(title)s\" on %(name)s."
 msgid "required"
 msgstr "Обязательное поле"
 
+#: templates/django_knowledge/form.html:29
+msgid "Respond to this question"
+msgstr "Ответить на вопрос"
+
 #: templates/django_knowledge/index.html:6
 msgid "Support"
 msgstr "Служба поддержки"
@@ -341,12 +345,6 @@ msgid "No responses yet."
 msgstr "Ответов пока нет."
 
 #: templates/django_knowledge/thread.html:66
-#, fuzzy
-#| msgid "Please log in to ask a question."
-msgid "Respond to this question"
-msgstr "Ответить на вопрос"
-
-#: templates/django_knowledge/thread.html:66
 msgid "and check back often for updates."
 msgstr "и проверять обновления."
 
@@ -366,25 +364,21 @@ msgstr "Добро пожаловать в службу поддержки."
 msgid "Search for answers to your questions below, or ask your own."
 msgstr "Найдите ответы на свои вопросы или задайте новый."
 
-#: views.py:17 views.py:23
-msgid "Delete"
-msgstr "Удалить"
+#~ msgid "Delete"
+#~ msgstr "Удалить"
 
-#: views.py:17
-msgid "Lock"
-msgstr "Закрыть"
+#~ msgid "Lock"
+#~ msgstr "Закрыть"
 
-#: views.py:18
 #, fuzzy
-#| msgid "accepted"
-msgid "Clear_accepted"
-msgstr "Принято"
+#~| msgid "accepted"
+#~ msgid "Clear_accepted"
+#~ msgstr "Принято"
 
-#: views.py:23
 #, fuzzy
-#| msgid "accepted"
-msgid "Accept"
-msgstr "Принято"
+#~| msgid "accepted"
+#~ msgid "Accept"
+#~ msgstr "Принято"
 
 #~ msgid "Уведомлять"
 #~ msgstr "Внимание"
