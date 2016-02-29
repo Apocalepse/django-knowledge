@@ -259,11 +259,11 @@ msgstr "%(counter)s результатов"
 
 #: templates/django_knowledge/list.html:7
 msgid " for %(search)s"
-msgstr "для фразы <em>%(search)s</em>"
+msgstr "для фразы %(search)s"
 
 #: templates/django_knowledge/list.html:7
 msgid " in %(category_title)s category"
-msgstr "в категории <em>%(category_title)s</em>"
+msgstr "в категории %(category_title)s"
 
 #: templates/django_knowledge/list.html:13
 #, python-format
