@@ -17,7 +17,9 @@ admin.site.register(Question, QuestionAdmin)
 
 
 class ResponseAdmin(admin.ModelAdmin):
-    list_display = [f.name for f in Response._meta.fields]
+    list_display = ['pk', 'body', 'question', 'added', 'status', 'accepted']
+    list_display_links = ['pk', 'body']
+    list_filter = ['question', 'status', 'accepted']
     list_select_related = True
     raw_id_fields = ['user', 'question']
 admin.site.register(Response, ResponseAdmin)
