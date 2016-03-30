@@ -17,7 +17,10 @@ admin.site.register(Question, QuestionAdmin)
 
 
 class ResponseAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'body', 'question', 'added', 'status', 'accepted']
+    def admin_body(self, obj):
+        return obj.body[:150]
+
+    list_display = ['pk', 'admin_body', 'question', 'added', 'status', 'accepted']
     list_display_links = ['pk', 'body']
     list_filter = ['question', 'status', 'accepted']
     list_select_related = True
