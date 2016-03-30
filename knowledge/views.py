@@ -169,14 +169,14 @@ def knowledge_moderate(
         raise Http404('Method is not POST')
 
     if model == 'question':
-        Model, perm = Question, 'change_question'
+        Model, perm = Question, 'knowledge.change_question'
     elif model == 'response':
-        Model, perm = Response, 'change_response'
+        Model, perm = Response, 'knowledge.change_response'
     else:
         raise Http404('No permissions')
 
     if not request.user.has_perm(perm):
-        raise Http404('No permissions')
+        raise Http404('No permissions2')
 
     if mod not in allowed_mods[model]:
         raise Http404('Not allowed modification')
