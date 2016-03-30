@@ -166,20 +166,20 @@ def knowledge_moderate(
         return HttpResponseRedirect(settings.LOGIN_URL+"?next=%s" % request.path)
 
     if request.method != 'POST':
-        raise Http404
+        raise Http404('Method is not POST')
 
     if model == 'question':
         Model, perm = Question, 'change_question'
     elif model == 'response':
         Model, perm = Response, 'change_response'
     else:
-        raise Http404
+        raise Http404('No permissions')
 
     if not request.user.has_perm(perm):
-        raise Http404
+        raise Http404('No permissions')
 
     if mod not in allowed_mods[model]:
-        raise Http404
+        raise Http404('Not allowed modification')
 
     instance = get_object_or_404(
         Model.objects.can_view(request.user),
