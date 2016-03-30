@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 
 from knowledge.models import Question, Response, Category
@@ -19,6 +20,9 @@ admin.site.register(Question, QuestionAdmin)
 class ResponseAdmin(admin.ModelAdmin):
     def admin_body(self, obj):
         return obj.body[:150]
+
+    admin_body.short_description = u'Фото'
+    admin_body.allow_tags = True
 
     list_display = ['pk', 'admin_body', 'question', 'added', 'status', 'accepted']
     list_display_links = ['pk', 'body']
